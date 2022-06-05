@@ -9,9 +9,10 @@ use App\Models\users;
 class loginController extends Controller
 {
     public function select (request $request){
-        $user = DB::table('users')->where('name', $request->nome );
-        if($user){
-            return view('inicio',  ['user'=>$user]);
+        $user = DB::table('login')->where('login', $request->login)
+            ->where('password', $request->senha );
+        if($user==true){
+            return view('inicio');
         }
         else{
             return view('login');

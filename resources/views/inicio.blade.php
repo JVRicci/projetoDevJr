@@ -31,14 +31,20 @@
             <a href="/cons-plano">Consultar</a>  
             
         </div></div>
+        
+
+        <div class="dropdown">
+            Cadastro
+        <div class="dropdown-content">
+            <a href="/cad-cadastro">Cadastrar</a>  
+            <a href="/cons-cadastro">Consultar</a>  
+            
+        </div></div>
 
    </header>
    
    <x-main/>
 
-   @foreach ($user as $user)
-   {{$user->name}}
-   @endforeach
 
    
 <body>

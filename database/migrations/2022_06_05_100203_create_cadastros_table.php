@@ -13,15 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        if(!Schema::hasTable(table:'post_comments')){
+        Schema::create('cadastros', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('documento');
-            $table->string('email');
-            $table->string('telefone');
-            $table->date('nascimento');
+            //$table->integer('idCliente');
+            $table->foreignId('idCliente')->references('id')->on('clientes');
+            //$table->integer('idPlano');
+            $table->foreignId('idPlano')->references('id')->on('planos');
+            $table->date('fidelidadeInicio');
             $table->timestamps();
         });
+    }
     }
 
     /**
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('cadastros');
     }
 };

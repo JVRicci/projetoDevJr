@@ -24,9 +24,12 @@ Route::POST('/inicio', 'loginController@select');
 
 Route:: get('/cad-cliente', 'clientesController@create');
 Route:: get('/cad-plano', 'planosController@create');
+Route:: get('/cad-cadastro', 'cadastroController@cadastrar');
 
 Route:: POST('/cons-cliente','clientesController@store')->name('registrar-cliente');
 Route:: POST('/cons-plano', 'planosController@store')->name('registrar-plano');
+Route:: POST('/cons-plano', 'cadastroController@store')->name('registrar-cadastro');
 
 Route::get('/cons-plano', 'planosController@select');
 Route::get('/cons-cliente', 'clientesController@select');
+Route::get('/cons-cadastro', 'cadastroController@select');

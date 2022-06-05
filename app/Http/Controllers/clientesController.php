@@ -12,7 +12,7 @@ class clientesController extends Controller{
     } 
     
     
-    public function select(request $request){
+    public function select(){
         $clientes = DB::table('clientes')->get();
         return view('components/clientes/cons-cliente', ['clientes'=>$clientes]);
     }
