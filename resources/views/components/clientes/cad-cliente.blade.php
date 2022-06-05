@@ -1,3 +1,6 @@
+@extends('main')
+@section('title','Cadastrar')
+@section('content')
 
 <div class='form-group'>
 <form method='POST' action="{{ route ('registrar-cliente')}}">
@@ -18,3 +21,5 @@
     </div>
 </form>
 </div>
+
+@endsection

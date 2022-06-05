@@ -1,3 +1,7 @@
+@extends('main')
+@section('title','Cadastrar')
+@section('content')
+
 <div>
 <div class="row">
         <div class="col-4">
@@ -35,3 +39,7 @@
             </div>
         </div>
 </div>
+
+
+
+@endsection

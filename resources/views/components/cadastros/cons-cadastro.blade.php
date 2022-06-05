@@ -1,4 +1,7 @@
-<div>
+@extends('main')
+@section('title','Cadastrar')
+@section('content')
+
 <div class="row">
         <div class="col-4">
             <div id="doador-div">
@@ -14,20 +17,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($clientes as $clientes)
-                        @foreach ($planos as $planos)
+                        @foreach ($cadastros as $clientes)
                         <tr>           
                             <td scope="row"></td>       
                             <td scope="row">{{$clientes->id}}</td>
-                            <td scope="row">{{$clientes->nome}}</td>
-                            <td scope="row">{{$planos->nome}}</td>
-                            <td scope="row">{{$planos->valor}}</td>
+                            <td scope="row"><a href="/cadastro?id={{$clientes->id}}">{{$clientes->nomec}}</a></td>
+                            <td scope="row">{{$clientes->nomep}}</td>
+                            <td scope="row">{{$clientes->valor}}</td>
                         </tr>
-                        @endforeach
                         @endforeach
                     </tbody>
                 </table>
 
             </div>
         </div>
-</div>
+
+@endsection

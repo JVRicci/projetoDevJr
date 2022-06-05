@@ -1,5 +1,10 @@
+@extends('main')
+@section('title','Cadastrar')
+@section('content')
+
+
 <div>
-<form method='POST' action="{{route ('registrar-plano')}}">
+<form method='POST' action="{{ route ('registrar-plano')}}">
     @csrf
     
     <div class='col-4'>
@@ -17,3 +22,5 @@
     </div>
 </form>
 </div>
+
+@endsection

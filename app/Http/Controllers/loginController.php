@@ -12,7 +12,7 @@ class loginController extends Controller
         $user = DB::table('login')->where('login', $request->login)
             ->where('password', $request->senha );
         if($user==true){
-            return view('inicio');
+            return view('main');
         }
         else{
             return view('login');
