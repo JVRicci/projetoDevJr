@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use App\Models\cadastro;
 use App\Models\clientes;
 use App\Models\planos;
@@ -38,19 +40,26 @@ class cadastroController extends Controller
             //infos do cliente
             ->select('cadastros.id as id', 'clientes.id as idcliente', 'clientes.nome as nomec','clientes.documento as documento', 'clientes.email as email',
             'clientes.telefone as telefone', 'clientes.nascimento as nascimento', 
+            'cadastros.fidelidadeInicio as fidelidade',
             //infos do plano
             'planos.nome as nomep', 'planos.download as download', 'planos.upload as upload',
              'planos.inicio as inicio', 'planos.fim as fim', 'planos.valor as valor', )
             ->get()
             ->where('id', $id );
+
         return view('components/cadastros/cadastroRegistrado', ['cadastro'=>$cadastro],);
     }
 
     public function store(request $request){
+        /*$fimFid = $request->inicio; 
+        $fidelidade = $fimFid->addMonths(12);
+        return $fidelidade ;*/
+
         cadastro::create([
             'idCliente' =>$request->cliente,
             'idPlano' => $request->plano,
-            'fidelidadeInicio' =>$request->inicio
+            'fidelidadeInicio' =>$request->inicio,
+            'fidelidadeFim' => null
         ]);
 
         

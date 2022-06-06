@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jun-2022 às 14:09
+-- Tempo de geração: 06-Jun-2022 às 22:04
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -32,6 +32,7 @@ CREATE TABLE `cadastros` (
   `idCliente` bigint(20) UNSIGNED NOT NULL,
   `idPlano` bigint(20) UNSIGNED NOT NULL,
   `fidelidadeInicio` date NOT NULL,
+  `fidelidadeFim` date DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -40,14 +41,15 @@ CREATE TABLE `cadastros` (
 -- Extraindo dados da tabela `cadastros`
 --
 
-INSERT INTO `cadastros` (`id`, `idCliente`, `idPlano`, `fidelidadeInicio`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2022-06-07', '2022-06-05 14:56:10', '2022-06-05 14:56:10'),
-(2, 1, 1, '2022-06-07', '2022-06-05 14:56:41', '2022-06-05 14:56:41'),
-(8, 3, 2, '2022-06-21', '2022-06-06 13:19:30', '2022-06-06 13:19:30'),
-(9, 3, 2, '2022-06-21', '2022-06-06 13:19:50', '2022-06-06 13:19:50'),
-(10, 3, 1, '2022-06-07', '2022-06-06 13:21:02', '2022-06-06 13:21:02'),
-(11, 2, 1, '2022-06-15', '2022-06-06 13:23:29', '2022-06-06 13:23:29'),
-(12, 4, 3, '2022-06-14', '2022-06-06 13:24:54', '2022-06-06 13:24:54');
+INSERT INTO `cadastros` (`id`, `idCliente`, `idPlano`, `fidelidadeInicio`, `fidelidadeFim`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2022-06-07', NULL, '2022-06-05 14:56:10', '2022-06-05 14:56:10'),
+(2, 1, 1, '2022-06-07', NULL, '2022-06-05 14:56:41', '2022-06-05 14:56:41'),
+(8, 3, 2, '2022-06-21', NULL, '2022-06-06 13:19:30', '2022-06-06 13:19:30'),
+(9, 3, 2, '2022-06-21', NULL, '2022-06-06 13:19:50', '2022-06-06 13:19:50'),
+(10, 3, 1, '2022-06-07', NULL, '2022-06-06 13:21:02', '2022-06-06 13:21:02'),
+(11, 2, 1, '2022-06-15', NULL, '2022-06-06 13:23:29', '2022-06-06 13:23:29'),
+(12, 4, 3, '2022-06-14', NULL, '2022-06-06 13:24:54', '2022-06-06 13:24:54'),
+(13, 2, 3, '2022-06-07', NULL, '2022-06-06 23:03:55', '2022-06-06 23:03:55');
 
 -- --------------------------------------------------------
 
@@ -286,7 +288,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `cadastros`
 --
 ALTER TABLE `cadastros`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `clientes`
