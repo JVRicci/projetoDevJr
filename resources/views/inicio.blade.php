@@ -15,9 +15,10 @@
 <body>
 
    <header>
-                          
+        
+   <div id='headerItens'>
         <div class="dropdown">
-        Cliente
+        <p>Cliente</p>
         <div class="dropdown-content">
             <a href="/cad-cliente">Cadastrar</a>  
             <a href="/cons-cliente">Consulta</a> 
@@ -25,7 +26,7 @@
 
         
         <div class="dropdown">
-            Plano
+        <p>Plano</p>
         <div class="dropdown-content">
             <a href="/cad-plano">Cadastrar</a>  
             <a href="/cons-plano">Consultar</a>  
@@ -34,13 +35,13 @@
         
 
         <div class="dropdown">
-            Cadastro
+        <p>Cadastro</p>
         <div class="dropdown-content">
             <a href="/cad-cadastro">Cadastrar</a>  
             <a href="/cons-cadastro">Consultar</a>  
             
         </div></div>
-
+    </div>
    </header>
    
    @yield('content')

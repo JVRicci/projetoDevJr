@@ -52,6 +52,6 @@ class cadastroController extends Controller
         
         $cadastros = DB::table('cadastros')->get();
         $clientes = DB::table('clientes')->get();
-        return view('components/cadastros/cons-cadastro', ['clientes'=>$clientes]);
+        return redirect ('/cons-cadastro');
     }
 }

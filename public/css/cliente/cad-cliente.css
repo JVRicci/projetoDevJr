@@ -1,0 +1,27 @@
+#divForm{
+    display: grid;
+    color: white;
+
+    padding: 25px;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color:rgb(49,49,49);
+    border-radius: 20px;
+
+    box-shadow: 0 0 0 1px white inset;
+}
+
+
+input[type='text'], input[type='password'], input[type='email']{
+
+    margin-bottom:25px;
+    padding: 5px;
+    text-align:center;
+}
+
+input[type='submit']{
+    
+    margin-top:25px;
+}

@@ -1,0 +1,26 @@
+#divCorpo{
+    
+    display: grid;
+    color: white;
+
+    padding: 25px;
+    margin-top: 10vh;
+    width: 120vh;
+
+    background-color:rgb(49,49,49);
+    border-radius: 20px;
+
+    box-shadow: 0 0 0 1px white inset;
+}
+.row{
+    
+    margin-left: 20vh;
+}
+
+a:link{
+    color:rgb(132, 171, 255);
+}
+
+a:hover{
+    color:rgb(85, 85, 255);
+}

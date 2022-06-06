@@ -29,6 +29,7 @@ Route:: get('/cad-cadastro', 'cadastroController@cadastrar');
 Route:: POST('/cons-cliente','clientesController@store')->name('registrar-cliente');
 Route:: POST('/cons-plano', 'planosController@store')->name('registrar-plano');
 Route:: POST('/cons-cadastro', 'cadastroController@store')->name('registrar-cadastro');
+Route:: POST('/login', 'loginController@store')->name('registrar-user');
 
 Route::get('/cons-plano', 'planosController@select');
 Route::get('/cons-cliente', 'clientesController@select');

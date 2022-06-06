@@ -2,11 +2,13 @@
 @section('title','Cadastrar')
 @section('content')
 
+<link rel="stylesheet" href="css/cadastro/cons-cadastro.css">
+
 <div class="row">
         <div class="col-4">
-            <div id="doador-div">
+            <div id="divCorpo">
 
-                <table id="doador-table" class="table table-dark">
+                <table id="cadastro-table" class="table table-dark">
                     <thead >
                         <tr>
                             <th scope="col"></th>
@@ -17,13 +19,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($cadastros as $clientes)
+                        @foreach ($cadastros as $cadastros)
                         <tr>           
                             <td scope="row"></td>       
-                            <td scope="row">{{$clientes->id}}</td>
-                            <td scope="row"><a href="/cadastro?id={{$clientes->id}}">{{$clientes->nomec}}</a></td>
-                            <td scope="row">{{$clientes->nomep}}</td>
-                            <td scope="row">{{$clientes->valor}}</td>
+                            <td scope="row">{{$cadastros->id}}</td>
+                            <td scope="row"><a href="/cadastro?id={{$cadastros->id}}">{{$cadastros->nomec}}</a></td>
+                            <td scope="row">{{$cadastros->nomep}}</td>
+                            <td scope="row">{{$cadastros->valor}}</td>
                         </tr>
                         @endforeach
                     </tbody>

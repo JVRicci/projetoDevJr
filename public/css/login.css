@@ -1,10 +1,61 @@
-
-#loginDiv{
+body{
     
+    animation: abrir 1s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: abrir .5s;
+    background-color: rgb(110, 110, 110)
+}
+#loginDiv{
+    display: grid;
+    color: white;
+
     padding: 25px;
     margin-left: auto;
     margin-right: auto;
 
+    background-color:rgb(49,49,49);
+    border-radius: 20px;
+    
+    box-shadow: 0 0 0 1px white inset;
 
 }
 
+.modal-content{
+    background-color:rgb(49,49,49);
+    color: white;
+
+}
+input[type='text'], input[type='password']{
+
+    margin-bottom:25px;
+    border:1px ridge;
+    border-radius: 10px;
+    padding: 5px;
+    text-align:center;
+}
+button{
+    margin-left: 20vh;
+}
+
+
+
+@keyframes abrir{
+    from{
+        opacity:0 ;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes leva-element{
+    from{
+        margin-left:-50px
+    }
+    to{
+        margin-left:0
+    }
+}

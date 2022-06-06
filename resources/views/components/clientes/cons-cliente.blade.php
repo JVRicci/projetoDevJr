@@ -1,14 +1,14 @@
 @extends('main')
 @section('title','Cadastrar')
 @section('content')
-
+<link rel="stylesheet" href="css/cliente/cons-cliente.css">
 
 <div>
-<div class="row">
+<div class="row" >
         <div class="col-4">
-            <div id="doador-div">
+            <div id='divCorpo'>
 
-                <table id="doador-table" class="table table-dark">
+                <table id="cliente-table" class="table table-dark">
                     <thead >
                         <tr>
                             <th scope="col"></th>
