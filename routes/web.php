@@ -34,4 +34,4 @@ Route:: POST('/login', 'loginController@store')->name('registrar-user');
 Route::get('/cons-plano', 'planosController@select');
 Route::get('/cons-cliente', 'clientesController@select');
 Route::get('/cons-cadastro', 'cadastroController@select');
-Route::put('/cadastro?id={id}', 'cadastroController@carregaCad');
+Route::get('/cadastro/id={id}', 'cadastroController@carregaCad');

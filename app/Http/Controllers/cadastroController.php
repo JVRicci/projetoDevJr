@@ -30,16 +30,20 @@ class cadastroController extends Controller
 
     public function carregaCad(request $request){
 
-        $id = $request->query('id');
+        $id = request('id');
 
         $cadastro = DB::table('cadastros')
             ->join('clientes','clientes.id','=','cadastros.idCliente')
             ->join('planos','planos.id','=','cadastros.idPlano')
-            ->select('cadastros.id as id', 'clientes.nome as nomec', 'planos.nome as nomep', 'planos.valor')
-            //->get();
-            ->where('id', $request->query('id') );
-        //return view('components/cadastros/cadastroRegistrado', ['cadastro'=>$cadastro],);
-        return $cadastro;
+            //infos do cliente
+            ->select('cadastros.id as id', 'clientes.id as idcliente', 'clientes.nome as nomec','clientes.documento as documento', 'clientes.email as email',
+            'clientes.telefone as telefone', 'clientes.nascimento as nascimento', 
+            //infos do plano
+            'planos.nome as nomep', 'planos.download as download', 'planos.upload as upload',
+             'planos.inicio as inicio', 'planos.fim as fim', 'planos.valor as valor', )
+            ->get()
+            ->where('id', $id );
+        return view('components/cadastros/cadastroRegistrado', ['cadastro'=>$cadastro],);
     }
 
     public function store(request $request){

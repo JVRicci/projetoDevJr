@@ -40,7 +40,8 @@
             <a href="/cad-cadastro">Cadastrar</a>  
             <a href="/cons-cadastro">Consultar</a>  
             
-        </div></div>
+        </div>
+    </div>
     </div>
    </header>
    

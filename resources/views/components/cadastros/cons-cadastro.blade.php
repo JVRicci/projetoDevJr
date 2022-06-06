@@ -23,7 +23,7 @@
                         <tr>           
                             <td scope="row"></td>       
                             <td scope="row">{{$cadastros->id}}</td>
-                            <td scope="row"><a href="/cadastro?id={{$cadastros->id}}">{{$cadastros->nomec}}</a></td>
+                            <td scope="row"><a href="/cadastro/id={{$cadastros->id}}">{{$cadastros->nomec}}</a></td>
                             <td scope="row">{{$cadastros->nomep}}</td>
                             <td scope="row">{{$cadastros->valor}}</td>
                         </tr>

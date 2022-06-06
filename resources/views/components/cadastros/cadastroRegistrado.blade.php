@@ -1,30 +1,38 @@
+
+
 @extends('main')
 @section('title','Cadastrar')
 @section('content')
 
-<div class="container">
+<link rel='stylesheet' href='../css/inicio.css'>
+<link rel='stylesheet' href='../css/dropdownMenu.css'>
+<link rel='stylesheet' href='../css/cadastro/cadastro.css'>
 
+<div class="row" id='divCadastro'>
+    
+@foreach ($cadastro as $cadastro)
+    <div id="dados-cliente">
 
-@foreach ($cadastro as $clientes)
-    <div class="row">
-    <div id="dados-cadastro">
-
-        <h6> ID - Nome</h6>
-        <p>Documento: </p>
+        <p> {{$cadastro->idcliente}} - {{$cadastro->nomec}}</p>
+        <p>CPF: {{$cadastro->documento}}</p>
+        <p>Nascimento: {{$cadastro->nascimento}}</p>
+        <p>Email: {{$cadastro->email}}</p>
+        <p>Telefone: {{$cadastro->telefone}}</p>
 
         <hr>
         
-        <div id="conDiv">
-        <p>Email</p>
-        <p>Telefone</p>
-        <p>Nascimento</p>
+        <div id="planoDiv">
+        <p>Plano: {{$cadastro->nomep}}</p>
+        <p>Download: {{$cadastro->download}}</p>
+        <p>Upload: {{$cadastro->upload}}</p>
+        <p>Inicio de Vigencia: {{$cadastro->inicio}}</p>
+        <p>Fim de Vigencia: {{$cadastro->fim}}</p>
+        <p>Valor: {{$cadastro->valor}}</p>
         </div>
 
-        <hr>
     </div>
 @endforeach
-
-    </div>
 </div>
+
 
 @endsection

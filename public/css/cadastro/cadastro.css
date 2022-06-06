@@ -1,0 +1,18 @@
+
+#divCadastro{
+    background: rgb(49,49,49);
+    border-radius: 10px;
+    box-shadow: 0 0px 7px inset rgb(190, 190, 190);
+    color: white;
+
+    margin-top: 3vh;
+    margin-left: 55vh;
+    padding: 3vh;
+    padding-bottom: 0vh;
+
+    width: 50vh;
+}
+
+hr{
+    background-color: white;
+}
