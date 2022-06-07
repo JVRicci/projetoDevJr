@@ -1,5 +1,3 @@
-
-
 @extends('main')
 @section('title','Cadastrar')
 @section('content')
@@ -23,7 +21,9 @@
         
         <div id="planoDiv">
         <p>Plano: {{$cadastro->nomep}}</p>
-        <p>Fidelidade: {{$cadastro->fidelidade}}</p>
+            
+        <p>Fidelidade até {{date( "d/m/Y", strtotime( "{$cadastro->fidelidade}"))}} </p>
+
         <p>Download: {{$cadastro->download}}</p>
         <p>Upload: {{$cadastro->upload}}</p>
         <p>Inicio de Vigencia: {{$cadastro->inicio}}</p>

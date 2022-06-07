@@ -21,7 +21,7 @@
         @endforeach
     </select>
     <label for='inicio' id='inicioFidelidade'>Inicio da Fidelidade
-        <input type='date' name='inicio' class='form-control'required>
+        <input type='date' name='inicio' class='form-control' max='{{date( "d/m/Y", strtotime( "now"))}}' required>
     </label>
         <input type="submit" value='Cadastrar' class='btn btn-secondary'>
     </div>

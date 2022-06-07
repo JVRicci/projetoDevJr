@@ -11,7 +11,7 @@
     <div class='col-4' id='divForm'>
         <input type='text' class='form-control' placeholder='Nome' name='nome' required>
 
-        <input type='text' class='form-control' placeholder='CPF' id='cpfTxt' name='documento' required>
+        <input type='text' class='form-control' placeholder='CPF' id='cpfTxt'  name='documento'  required>
 
         <input type="email" class='form-control' placeholder='Email' name='email' required>
 
@@ -24,8 +24,8 @@
 </form>
 </div>
 
-
-<script type="text/javascript" src="js/masks.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+<script type="text/javascript" src="js/jquery.mask.min.js"></script> 
+<script type="text/javascript" src="js/masks.js"></script>  
 
 @endsection
