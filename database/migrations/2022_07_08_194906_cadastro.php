@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        //
         if(!Schema::hasTable(table:'post_comments')){
         Schema::create('cadastros', function (Blueprint $table) {
             $table->id();
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastros');
+        //
     }
 };
